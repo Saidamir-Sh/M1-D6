@@ -85,20 +85,49 @@ dice()
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
 
+const whoIsBigger = function (n1, n2) {
+  if (n1 > n2) {
+    console.log(n1)
+  } else {
+    console.log(n2)
+  }
+}
+whoIsBigger(4, 8)
+
 /* EXERCISE 3
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
+const splitMe = function(givenString) {
+
+  let splittedString = givenString.split(" ")
+  console.log(splittedString)
+
+}
+splitMe("I Love Coding")
+
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+const deleteOne = function (stringVal, BooleanVal) {
+  if (typeof BooleanVal !== "boolean" || typeof stringVal !== "string") {
+    console.log("Check your parameters, first parameter should be string, second is boolean")
+  } else if(BooleanVal === true) {
+    console.log(stringVal.slice(1, stringVal.length))
+  } else if (BooleanVal === false) {
+    console.log(stringVal.slice(0, stringVal.length - 1))
+  }
+}
+
+deleteOne("Strive", false)
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
+const onlyLetters = function ()
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
