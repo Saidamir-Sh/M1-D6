@@ -201,6 +201,18 @@ const howManyDays = function (passedDate) {
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
 
+const isTodayMyBirthday = function () {
+  let birthdayDate = 26
+  let d = new Date()
+  let today = d.getDate()
+
+  if (today === birthdayDate) {
+    console.log("Congratulations ! Today is your birthday")
+  } else {
+    return false
+  }
+}
+
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
 
