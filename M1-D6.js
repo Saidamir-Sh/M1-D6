@@ -187,6 +187,13 @@ console.log(rollTheDices(3))
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
 const howManyDays = function (passedDate) {
+  let d = new Date()
+  let today = d.getDate()
+  if (passedDate <= 31 && passedDate < today) {
+    return passedDate - today 
+  } else {
+    return false
+  }
   
 }
 
