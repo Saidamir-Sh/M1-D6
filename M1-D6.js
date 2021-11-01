@@ -76,10 +76,10 @@ console.log(me)
 const dice = function () {
   
   let randomInteger = Math.floor(Math.random() * 6) + 1 
-  console.log(randomInteger)
+  return randomInteger
 
 }
-dice()
+console.log(dice())
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
@@ -127,15 +127,43 @@ deleteOne("Strive", false)
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
-const onlyLetters = function ()
+// const onlyLetters = function (mixedString) {
+//   if (typeof mixedString === "string") {
+//     let arrMixedString = mixedString.split("")
+//     let arrOnlyLetters = arrMixedString.filter(function(a) {
+//       return typeof a == "string"
+//     })
+
+//     console.log(arrOnlyLetters)
+
+//   }
+// }
+// onlyLetters("hello 7 world")
+const onlyLetters = function (str){
+  return str.replace(/\d/g,"")
+
+}
+console.log(onlyLetters("hell7o 7 world"))
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
+const isThisAnEmail = function(strEmail) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(strEmail);
+}
 
+console.log(isThisAnEmail(""))
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
+const whatDayisIt = function() {
+  let weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  let d = new Date()
+  return weekday[d.getDay()]
+}
+
+console.log(whatDayisIt())
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
@@ -147,10 +175,20 @@ const onlyLetters = function ()
         values: [3, 3, 4]
     }
 */
+const rollTheDices = function (int) {
+  let  arrDice = []
+  for (let i = 0; i < int; i++) {
+     console.log(dice())
+  }
+}
 
+console.log(rollTheDices(3))
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
+const howManyDays = function (passedDate) {
+  
+}
 
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
