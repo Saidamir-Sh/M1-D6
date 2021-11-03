@@ -290,7 +290,26 @@ const onlyTitles = function (moviesArr14) {
 /* EXERCISE 15
    Write a function called onlyInThisMillennium which returns only the movies produced in this millennium from the provided movies array.
 */
+const onlyInThisMillennium = function(moviesArr) {
+  
+  let movieYear = []
 
+  for (let i = 0; i < moviesArr.length; i++) {
+  
+    let moviesArrYear = moviesArr[i].Year
+    movieYear.push(moviesArrYear)
+
+  }
+  function checkYear(year) {
+    return year >= 2000
+  }
+
+  let filteredYear = movieYear.filter(checkYear)
+
+  console.log(filteredYear)
+  
+
+}
 /* EXERCISE 16 
     Write a function called getMovieById which receives an id as a parameter and returns the movie with the given id from the provided movies array.
 */
@@ -462,3 +481,4 @@ const movies = [
 
 oldestMovie(movies)
 onlyTitles(movies)
+onlyInThisMillennium(movies)
